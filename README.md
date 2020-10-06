@@ -2,19 +2,16 @@
 
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0) [![Build Status](https://travis-ci.org/mozilla/hubs.svg?branch=master)](https://travis-ci.org/mozilla/hubs) [![Discord](https://img.shields.io/discord/498741086295031808)](https://discord.gg/CzAbuGu)
 
-The client-side code for [Mozilla Hubs](https://hubs.mozilla.com/), an online 3D collaboration platform that works for desktop, mobile, and VR platforms.
-
 [Learn more about Hubs](https://hubs.mozilla.com/docs/welcome.html)
 
 ## Getting Started
 
-If you would like to run Hubs on your own servers, check out [Hubs Cloud](https://hubs.mozilla.com/docs/hubs-cloud-intro.html).
+### Development environment
+I recommend using WSL on windows (WSL2) because it has much better support for VR headsets with SteamVR. Chrome / firefox do not have in browser VR support on Ubuntu yet.
 
-If you would like to deploy a custom client to your existing Hubs Cloud instance please refer to [this guide](https://hubs.mozilla.com/docs/hubs-cloud-custom-clients.html).
+WSL allows you to use all the great dev tools of Ubuntu while still being able to test things easily in VR.
 
-If you would like to contribute to the main fork of the Hubs client please see the [contributor guide](./CONTRIBUTING.md).
-
-If you just want to check out how Hubs works and make your own modifications continue on to our Quick Start Guide.
+As an IDE, Visual Studio Code is pretty good for Node.js
 
 ### Quick Start
 
@@ -28,10 +25,13 @@ cd hubs
 git checkout hubs-cloud
 npm ci
 npm run login
+Host (eg hubs.mozilla.com): vrgt.org
 npm start
 ```
 
-Then visit https://localhost:8080 (note: HTTPS is required, you'll need to accept the warning for the self-signed SSL certificate)
+### Testing
+
+After making your changes, visit https://localhost:8080 to test them locally(note: HTTPS is required, you'll need to accept the warning for the self-signed SSL certificate)
 
 > Note: When running the Hubs client locally, you will still connect to the development versions of our [Janus WebRTC](https://github.com/mozilla/janus-plugin-sfu) and [reticulum](https://github.com/mozilla/reticulum) servers. These servers do not allow being accessed outside of localhost. If you want to host your own Hubs servers, please check out [Hubs Cloud](https://hubs.mozilla.com/docs/hubs-cloud-intro.html).
 
