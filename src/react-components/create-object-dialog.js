@@ -22,41 +22,17 @@ const attributionHostnames = {
 };
 
 const isMobile = AFRAME.utils.device.isMobile() || AFRAME.utils.device.isMobileVR();
-const instructions = "Paste a URL to an image, video, model, scene, or upload.";
+const instructions = "Paste a URL to an image or video. If it doesn't work you can share your screen using the overhead menu.";
 const desktopTips = `Tip: You can paste URLs directly into ${messages["app-name"]} with Ctrl+V`;
-const references = (
-  <span>
-    For models, try{" "}
-    <a href="https://sketchfab.com/search?features=downloadable&type=models" target="_blank" rel="noopener noreferrer">
-      Sketchfab
-    </a>{" "}
-    and{" "}
-    <a href="http://poly.google.com/" target="_blank" rel="noopener noreferrer">
-      Google Poly
-    </a>
-    <IfFeature name="show_model_collection_link">
-      , or our{" "}
-      <a
-        href={configs.link("model_collection", "https://sketchfab.com/mozillareality")}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        collection
-      </a>
-    </IfFeature>.
-  </span>
-);
 
 const mobileInstructions = (
   <div>
     <p>{instructions}</p>
-    <p>{references}</p>
   </div>
 );
 const desktopInstructions = (
   <div>
     <p>{instructions}</p>
-    <p>{references}</p>
     <p>{desktopTips}</p>
   </div>
 );
@@ -140,7 +116,7 @@ export default class CreateObjectDialog extends Component {
     const urlInput = (
       <input
         className={cx(styles.leftSideOfInput)}
-        placeholder="Image/Video/glTF URL"
+        placeholder="Image/Video URL"
         onFocus={e => handleTextFieldFocus(e.target)}
         onBlur={() => handleTextFieldBlur()}
         onChange={this.onUrlChange}
