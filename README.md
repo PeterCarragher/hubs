@@ -20,13 +20,15 @@ If you just want to check out how Hubs works and make your own modifications con
 
 [Install NodeJS](https://nodejs.org) if you haven't already. We recommend version 12 or above.
 
-Run the following commands:
+As in the hubs [documentation](https://hubs.mozilla.com/docs/hubs-cloud-custom-clients.html), run the following commands:
 
 ```bash
-git clone https://github.com/mozilla/hubs.git
+git clone git@github.com:PeterCarragher/hubs.git
 cd hubs
+git checkout hubs-cloud
 npm ci
-npm run dev
+npm run login
+npm start
 ```
 
 Then visit https://localhost:8080 (note: HTTPS is required, you'll need to accept the warning for the self-signed SSL certificate)
