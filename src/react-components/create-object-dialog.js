@@ -6,8 +6,6 @@ import { faPaperclip } from "@fortawesome/free-solid-svg-icons/faPaperclip";
 import { faTimes } from "@fortawesome/free-solid-svg-icons/faTimes";
 
 import { messages } from "../utils/i18n";
-import configs from "../utils/configs";
-import IfFeature from "./if-feature";
 import giphyLogo from "../assets/images/giphy_logo.png";
 import styles from "../assets/stylesheets/create-object-dialog.scss";
 import ducky from "../assets/models/DuckyMesh.glb";
@@ -22,7 +20,7 @@ const attributionHostnames = {
 };
 
 const isMobile = AFRAME.utils.device.isMobile() || AFRAME.utils.device.isMobileVR();
-const instructions = "Paste a URL to an image or video. If it doesn't work you can share your screen using the overhead menu.";
+const instructions = "Paste a URL to an image or video.";
 const desktopTips = `Tip: You can paste URLs directly into ${messages["app-name"]} with Ctrl+V`;
 
 const mobileInstructions = (

@@ -30,6 +30,9 @@ npm start
 ```
 
 ### Testing
+```bash
+npm test
+```
 
 After making your changes, visit https://localhost:8080 to test them locally(note: HTTPS is required, you'll need to accept the warning for the self-signed SSL certificate)
 

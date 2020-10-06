@@ -8,7 +8,6 @@ import { FormattedMessage } from "react-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons/faTimes";
 import { micLevelForVolume } from "../components/audio-feedback";
-import SpawnIcon from "../assets/images/spawn.svgi";
 import ShareScreenIconActive from "../assets/images/share_screen_active.svgi";
 import ShareScreenIcon from "../assets/images/share_screen.svgi";
 import ShareCameraIconActive from "../assets/images/share_camera_active.svgi";
